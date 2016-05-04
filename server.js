@@ -1,9 +1,4 @@
-// A very basic http server
-var http = require('http');
-http.createServer(function(req, res) {
-    res.writeHead(200, {
-        'Content-Type': 'text/plain'
-    });
-    res.end('Hello World');
-}).listen(3000);
+var connect = require('connect');
+var app = connect();
+app.listen(3000);
 console.log('Server running at http://localhost:3000/');
